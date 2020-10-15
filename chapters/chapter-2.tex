@@ -73,3 +73,30 @@ Do đó ta có đa thức nội suy Larange có dạng:
 			& =\frac{4699}{135} + \frac{455}{162}x - \frac{89}{54}x^2 + \frac{61}{54}x^3 - \frac{79}{810}x^4
 \end{align*}
 và giá trị gần đúng của $f(5,1)$ là $P(5,1)\approx 90,1281$.
+
+\textbf{\color{blue}Bài 2.} Tìm đa thức nội suy Newton của hàm số $y=f\left(x\right)$ được cho bằng bảng sau:\par
+b)\begin{center}\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	$x$ & $-0,35$ & $-0,1$ & $0,15$ & $0,4$ & $0,65$\\ \hline
+	$y$ & $0,387322$ & $0,762616$ & $1,501553$ & $2,956482$ & $5,821162$\\ \hline
+\end{tabular}\end{center}
+và tính gần đúng giá trị $f\left(0,55\right)$
+\textbf{Giải:}\par
+Ta có bảng tỉ sai phân như sau:
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	$x_i$ & $y_i$ & TSP cấp 1 & TSP cấp 2 & TSP cấp 3 & TSP cấp 4\\ \hline
+	$-0,35$ & $0,387322$ &&&& \\ \hline
+	&&$1,501176$&&& \\ \hline
+	$-0,1$ & $0,762616$&&$2,909144$&& \\ \hline
+	&&$2,955748$&&$3,758389$&\\ \hline
+	$0,15$&$1,501553$&&$5,727936$&&$3,641707$\\ \hline
+	&&$5,819716$&&$7,400096$& \\ \hline
+	$0,4$&$2,956482$&&$11,278008$&& \\ \hline
+	&&$11,45872$&&& \\ \hline
+	$0,65$&$5,821162$&&&& \\ \hline
+\end{tabular}\end{center}
+Đa thức nội suy Newton:
+$f\left(x\right)=0,387323 + 1,501176\left(x+0,35\right) + 2,909144\left(x+035\right)\left(x+0,1\right) + 3,758389\left(x+0,35\right)\left(x+0,1\right)\left(x-0,15\right) + 3,641707\left(x+0,35\right)\left(x+0,1\right)\left(x-0,15\right)\left(x-0,4\right)$
+Khi đó, ta tính được
+$f\left(0,55\right)=4,447517528$
