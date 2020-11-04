@@ -1,0 +1,98 @@
+\chapter{Tính gần đúng đạo hàm và tích phân}
+\textbf{\color{blue}Bài 2.} Bằng phương pháp hình thang và Simpson 1/3 với $n=10$ để tính gần đúng và đánh giá sai số các tích phân sau:\par
+f) $I= \int\limits^{4}_{2} \frac{1}{\left(x-1\right)^2}\mathrm{d}x$\\
+Ta có $h=\frac{b-a}{n}=\frac{4-2}{10}=0,2$ và $f\left(x\right)=\frac{1}{\left(x-1\right)^2}$\\
+\textbf{Áp dụng công thức hình thang}\\
+Ta có bảng sau:\\
+\begin{center}\begin{tabular}{|c|c|c|}
+	\hline
+	$x_i$ & \multicolumn{2}{|c|}{$y_i=f\left(x_i\right)=\frac{1}{\left(x_i-1\right)^2}$}\\
+	\hline
+	$2,0$ & $1$ & \\ \hline
+	$2,2$ && $25/36$\\ \hline
+	$2,4$ && $25/49$\\ \hline
+	$2,6$ && $25/64$\\ \hline
+	$2,6$ && $25/81$\\ \hline
+	$3,0$ && $1/4$\\ \hline
+	$3,2$ && $25/121$\\ \hline
+	$3,4$ && $25/144$\\ \hline
+	$3,6$ && $25/169$\\ \hline
+	$3,8$ && $25/196$\\ \hline
+	$4,0$ & $1/9$ & \\ \hline
+	 & $10/9$ & $2,809618197$\\ \hline
+\end{tabular}\end{center}\\
+Vậy theo công thức hình thang ta tính được giá trị gần đúng của tích phân là:\\
+$I\approx \int\limits^{4}_{2} \frac{1}{\left(x-1\right)^2}\mathrm{d}x=\frac{4-2}{2\left(10\right)}\left(\frac{10}{9}+2\left(2,809618197\right) \right) = 0,6730347505$\\
+Nếu làm tròn đến năm chữ số thập phân thì $I_T = 0,67303$\\
+Đánh giá sai số theo công thức tích phân, ta có:\\
+$f'\left(x\right)=-\frac{2}{\left(x-1\right)^3}$; $f''\left(x\right)=\frac{6}{\left(x-1\right)^4}$\\
+Do hàm $f''$ nghịch biến trên đoạn $\left[2;4\right]$ nên $ M= \underset{2\leq x \leq 4}{\max}\left|f''\left(x\right)\right| = \left|f''\left(2\right)\right|=6$ \\
+Nên $\left| I - I_T\right| \leq \frac{6}{12} \left(4-2\right)\left(0,2\right)^2= 0,04$\\
+Và $\left|I_T- \overline{I} \right| = 4,7505.10^{-6}$\\
+Do đó\\
+$\left| I - \overline{I} \right| \leq \left|I - I_T\right| + \left|I_T - \overline{I}\right| = 0,04 + 4,7505.10^{-6}$\\
+\textbf{Áp dụng công thức Simpson 1/3}\\
+Ta có bảng:\\
+\begin{center}\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	$i$ & $x_i$ & \multicolumn{3}{|c|}{$f\left(x_i\right)=\frac{1}{\left(x_i - 1 \right)^2}$}\\ \hline
+	$0$ & $2,0$ & $1$ & &\\ \hline
+	$1$ & $2,2$ & & $25/36$ &\\ \hline
+	$2$ & $2,4$ & & & $25/49$ \\ \hline
+	$3$ & $2,6$ & & $25/64$ & \\ \hline
+	$4$ & $2,8$ & & & $25/81$ \\ \hline
+	$5$ & $3,0$ & & $1/4$ & \\ \hline
+	$6$ & $3,2$ & & & $25/121$ \\ \hline
+	$7$ & $3,4$ & & $25/144$ &\\ \hline
+	$8$ & $3,6$ & & & $25/169$ \\ \hline
+	$9$ & $3,8$ & & $25/196$ & \\ \hline
+	$10$ & $4,0$ & $1/9$ & & \\ \hline
+	& & $10/9$ & $1,636231576$ & $1,173386621$ \\ \hline
+\end{tabular}\end{center}
+Áp dụng công thức Simpson 1/3 ta tính gần đúng tích phân là:\\
+$I_S=\int\limits^{4}_{2} \frac{1}{\left(x-1\right)^2}\mathrm{d}x \approx \frac{0,2}{3} \left[ \frac{10}{9} + 4\left(1,6366231576\right)+ 2\left(1,173386621\right) \right]=0,6668540438$\\
+Nếu lấy 5 chữ số thập phân, khi đó $\overline{I}=0,66685$. Nên $\left| I_S - \overline{I} \right| = 4.0438\times 10^{-6}$\\
+Đánh giá sai số theo công thức, ta có:\\
+$f^{\left(3\right)}\left(x\right) =\frac{24}{\left(x-1\right)^5}$; $f^{\left(4\right)}\left(x\right)=\frac{120}{\left(x-1\right)^6}$\\
+Do $f^{\left(4\right)}\left(x\right)$ là hàm nghịch biến trên đoạn $\left[2;4\right]$ nên $M=\underset{2 \leq x \leq 4}{\max} \left| f^{\left(4\right)}\left(x\right) \right| = \left| f^{\left(4\right)}\left(2\right) \right|= 120$\\
+Do đó $\left| I - I_{S} \right| \leq \frac{120}{180}\times \left(4-2\right) \times \left(0,2\right)^4=0,05\left(3\right) $\\
+Vậy $\left| I-\overline{I}\right| \leq \left| I- I_S\right| + \left|I_S -\overline{I}\right|=0,05\left(3\right) - 4.0438\times 10^{-6}$\\
+
+
+
+j) $I=\int\limits_{0,1}^{1,1} \frac{1}{\left(1+4x\right)^2}\mathrm{d}x$\\
+Ta có $h=\frac{1,1-0,1}{10}=0,1$ và $g\left(x\right)=\frac{1}{\left(1+4x\right)^2}$\\
+Ta tìm được các đạo hàm của $g\left(x\right)$\\
+$g'\left(x\right) = -\frac{8}{\left(1+4x\right)^3}$\\
+$g''\left(x\right) = \frac{96}{\left(1+4x\right)^4}$\\
+$g^{\left(3\right)\left(x\right)} = -\frac{1536}{\left(1+4x\right)^5}$\\
+$g^{\left(4\right)}\left(x\right) =\frac{30720}{\left(1+4x\right)^6}$\\
+\textbf{Áp dụng công thức hình thang}\\
+Ta có bảng giá trị:\\
+\begin{center}\begin{tabular}{|c|c|c|c|}
+	\hline
+	& $x_i$ & \multicolumn{2}{|c|}{$y_i=g\left(x_i\right)= \frac{1}{\left(1+4x_i\right)^2}$}\\ \hline 
+	$0$ & $0,1$ & $25/49$ & \\ \hline
+	$1$ & $0,2$ & & $25/81$ \\ \hline
+	$2$ & $0.3$ & & $25/121$\\ \hline
+	$3$ & $0,4$ & & $25/169$\\ \hline
+	$4$ & $0,5$ & & $1/9$\\ \hline
+	$5$ & $0,6$ & & $25/289$ \\ \hline
+	$6$ & $0,7$ & & $25/361$ \\ \hline
+	$7$ & $0,8$ & & $25/441$\\ \hline
+	$8$ & $0,9$ & & $25/529$\\ \hline
+	$9$ & $1,0$ & & $1/25$\\ \hline
+	$10$ & $1,1$ & $25/729$ & \\ \hline
+	& & $0,5444976344$ & $1,03399924$ \\ \hline
+\end{tabular}\end{center}
+Vậy theo công thức hình thang, giá trị gần đúng của tích phân cần tìm là:\\
+$I_T=\int\limits_{0,1}^{1,1} g\left(x\right)\mathrm{d}x= \frac{0,1}{2}\left[0,5444976344 + 2\left(1,03399924\right) \right] =0,1306248057$\\
+Nếu làm tròn đến năm chữ số thập phân thì $\overline{I}=0,13062$.\\
+Đánh giá sai số theo công thức tích phân:\\
+Ta có
+\begin{center}
+$$M=\underset{0,1 \leq x \leq\ 1,1}\max \left|g''\left(x\right) \right|= \left|g'' \left(1,1\right) \right|= 0,1129005854$$
+\end{center}
+Nên $$\left|I-I_T\right|\leq \frac{M}{12}\left(1,1-0,1\right)\left(0,1\right)^2=9,408382116\times 10^{-5}$$\\ và $$\left|I_T-\overline{I}\right| =4,8075\times 10^{-6}$$\\
+Do đó\\
+$$\left|I-\overline{I}\right| \leq \left| I- I_T \right| + \left| I_T -\overline{I} \right| \leq 9,408382116\times 10^{-5} + 4,8075\times 10^{-6} $$
