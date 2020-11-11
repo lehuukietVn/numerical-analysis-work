@@ -1,0 +1,34 @@
+\chapter{Giải gần đúng phương trình đại số và siêu việt}
+\textbf{\color{blue}Bài 2.}  Dùng phương pháp lập đơn tìm nghiệm của các phương trình:\\
+c) $x-\sin{x}=0,25$ với sai số $10^{-2}$ trong khoảng phân lý nghiệm $\left(1;1,5\right)$.\\
+\textit{Giải}\\
+Đặt $f\left(x\right)=x-\sin{x}-0,25 $. Ta có:\\
+$\bullet$ $f\left(x\right) $ liên tục trên khoảng $\left(1;1,5\right) $.\\
+$\bullet$ $f'\left(x\right)=1-\cos{x}>0$, $\forall x\in \left(1;1,5\right) $ nên hàm số đồng biến trên đoạn $\left(1;1,5\right)$.\\
+$\bullet$ $f\left(1\right)= 0,7325$, $f\left(1,5\right)=1,2238 $, suy ra $f\left(1\right)f\left(1,5\right)>0$.\\
+Từ đây ta suy ra hàm số vô nghiệm trên đoạn $\left(1;1,5\right) $.\par
+\bigskip
+f) $2^{x}-5x-3=0$ với sai số $10^{-4} $ trong khoảng phân ly nghiệm $\left(4;5\right) $.\\
+\textit{Giải}\\
+Đặt $f\left(x\right)=2^{x}-5x-3 $. Khi đó:\\
+$\bullet$ $f\left(x\right) $ liên tục trên khoảng $\left(4;5\right) $.\\
+$\bullet$ $f\left(4\right)f\left(5\right)<0 $.\\
+$\bullet$ $f'\left(x\right)=2^{x}\ln{2}-5 > 0, \forall x \in \left(4;5\right) $.\\
+Do đó: phương trình $f\left(x\right)=0  $ có một nghiệm trên khoảng $\left(4;5\right) $.\\
+Do $f'\left(x\right)>0 $ nên ta đặt $\varphi\left(x\right)=x-\frac{f\left(x\right)}{M} $. Trong đó:\\
+\begin{center} $M\geq \underset{x\in \left(4;5\right) }\max\left| f'\left(x\right) \right| \approx 17,1807 $ \end{center}
+Chọn $M=17,1807 $, suy ra $\varphi\left(x\right) =x-\frac{f\left(x\right) }{17,1807} = \frac{-2^{x}+22,1807x + 3}{17,1807}$.\\
+Ta có $\varphi ' \left(x\right) = \frac{-2^{x}\ln{2}+22,1807}{17,1807}$ và $\underset{x \in \left(4;5\right)}\max\left| \varphi ' \left(x\right) \right| < \left| \varphi ' \left(4\right) \right| = 0,6455 $.\\
+Chọn $L=0,6455 $.\\
+Chọn $x_0=4,7 $, ta có xấp xỉ nghiệm trong bảng sau:\\
+\begin{center}\begin{tabular}{|c|c|c|}
+	\hline
+	$n$ & $x_n=\varphi\left(x_{n-1}\right) $ & $\left| x_n - x* \right| \leq 1,82087 \left|x_n - x_{n-1}\right|$\\ \hline 
+	$1$ & $4,72956$ & $0,05382$\\ \hline
+	$2$ & $4,73641$ & $0,01247$ \\ \hline
+	$3$ & $4,73791$ & $0,02731$ \\ \hline
+	$4$ & $4,73822$ & $0,00056$ \\ \hline
+	$5$ & $4,73829$ & $0,00013$ \\ \hline
+	$6$ & $4,73831$ & $0,00004$ \\ \hline
+\end{tabular}\end{center}
+Vậy $x*\approx x_6 = 4,73831 $\par
